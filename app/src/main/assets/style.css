@@ -1,0 +1,239 @@
+:root {
+    --primary-color: #4A90E2;
+    --primary-dark: #357ABD;
+    --bg-color: #F5F7FA;
+    --text-color: #2C3E50;
+    --error-color: #E74C3C;
+    --success-color: #2ECC71;
+    --border-color: #E1E8ED;
+}
+
+* {
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.container {
+    background: white;
+    width: 100%;
+    max-width: 450px;
+    padding: 35px 25px;
+    border-radius: 24px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    position: relative;
+    overflow: hidden;
+}
+
+.animate-in {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+header {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.logo-icon {
+    background: #EBF3FF;
+    color: var(--primary-color);
+    width: 60px;
+    height: 60px;
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 15px;
+}
+
+.logo-icon .material-icons {
+    font-size: 32px;
+}
+
+h1 {
+    font-size: 26px;
+    font-weight: 600;
+    margin: 0;
+    letter-spacing: -0.5px;
+}
+
+p {
+    color: #7F8C8D;
+    font-size: 15px;
+    margin-top: 8px;
+}
+
+.form-group {
+    margin-bottom: 22px;
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+    font-size: 13px;
+    color: #34495E;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.input-with-icon {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input-with-icon .material-icons {
+    position: absolute;
+    left: 12px;
+    color: #BDC3C7;
+    font-size: 20px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="date"],
+select {
+    width: 100%;
+    padding: 14px 14px 14px 42px;
+    border: 2px solid var(--border-color);
+    border-radius: 12px;
+    font-size: 16px;
+    font-family: inherit;
+    transition: all 0.2s ease;
+    outline: none;
+    background-color: #FCFDFF;
+}
+
+input:focus {
+    border-color: var(--primary-color);
+    background-color: #FFF;
+    box-shadow: 0 0 0 4px rgba(74, 144, 226, 0.1);
+}
+
+/* Novo: Feedback visual para automação e UX */
+input.invalid {
+    border-color: var(--error-color);
+}
+
+.error-message {
+    color: var(--error-color);
+    font-size: 12px;
+    font-weight: 500;
+    margin-top: 5px;
+    display: none; /* Oculto por padrão */
+}
+
+.row {
+    display: flex;
+    gap: 12px;
+}
+
+.row > .form-group {
+    flex: 1;
+}
+
+/* Ajuste para inputs sem ícone na row */
+.row > .form-group:last-child input {
+    padding-left: 14px;
+}
+
+button {
+    width: 100%;
+    padding: 16px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 14px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+    margin-top: 15px;
+    box-shadow: 0 4px 12px rgba(74, 144, 226, 0.2);
+}
+
+button:active {
+    transform: scale(0.97);
+}
+
+.secondary-button {
+    background-color: transparent;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+    box-shadow: none;
+    margin-top: 25px;
+}
+
+.secondary-button:active {
+    background-color: #EBF3FF;
+}
+
+/* Success View Styles */
+#success-view {
+    text-align: center;
+    padding: 40px 0;
+    animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.success-icon-large {
+    color: var(--success-color);
+    margin-bottom: 20px;
+}
+
+.success-icon-large .material-icons {
+    font-size: 100px;
+}
+
+#success-view h2 {
+    color: var(--text-color);
+    margin: 0 0 10px 0;
+}
+
+#success-view p {
+    max-width: 300px;
+    margin: 0 auto;
+    line-height: 1.5;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.footer-links {
+    text-align: center;
+    margin-top: 25px;
+}
+
+.footer-links a {
+    color: #95A5A6;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+}

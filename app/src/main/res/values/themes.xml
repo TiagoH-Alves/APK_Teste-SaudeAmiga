@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.AppDeTesteParaAutomacao" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Cores sincronizadas com o novo design do index.html -->
+        <item name="colorPrimary">#4A90E2</item>
+        <item name="colorPrimaryDark">#357ABD</item>
+        <item name="colorAccent">#4A90E2</item>
+
+        <!-- Cor da barra de status -->
+        <item name="android:statusBarColor">#4A90E2</item>
+        
+        <!-- Cor de fundo da janela -->
+        <item name="android:windowBackground">#F5F7FA</item>
+    </style>
+</resources>
